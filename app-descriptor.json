@@ -1,0 +1,64 @@
+{
+  "baseUrl": "${host}",
+  "key": "deedmob",
+  "lifecycle": {
+    "installed": "/installed",
+    "uninstalled": "/uninstalled"
+  },
+
+  "modules": {
+    "chat:sidebar": [
+      {
+        "key": "deedmob-sidebar",
+        "name": {
+          "value": "App Sidebar"
+        },
+        "url": "/module/sidebar",
+        "authentication": "jwt"
+      }
+    ],
+    "chat:glance": [
+      {
+        "key": "deedmob-glance",
+        "name": {
+          "value": "Deedmob"
+        },
+        "icon": {
+          "url": "/img/logo.png",
+          "url@2x": "/img/logo.png"
+        },
+        "target": "deedmob-action-openSidebar",
+        "queryUrl": "/module/glance/state",
+        "authentication": "jwt"
+      }
+    ],
+    "chat:actionTarget" : [
+      {
+        "key": "deedmob-action-openSidebar",
+        "openSidebar": {
+          "key": "deedmob-sidebar"
+        }
+      },
+      {
+        "key": "deedmob-action-openDialog",
+        "openDialog": {
+          "key": "deedmob-dialog"
+        }
+      },
+      {
+        "key": "deedmob-action-callService",
+        "callService": {
+          "url": "/module/action/deedmob-service"
+        }
+      },
+      {
+        "key": "deedmob-action-callService-updateMessage",
+        "callService": {
+          "url": "/module/action/deedmob-service-updateMessage"
+        }
+      }
+
+    ]
+  }
+}
+
