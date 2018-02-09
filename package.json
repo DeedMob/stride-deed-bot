@@ -1,7 +1,11 @@
 {
-  "name": "banana-api-tutorial-simpleBot",
-  "repository": "bitbucket:atlassian/stride-api-tutorial",
-  "description": "a sample full featured Stride app",
+  "name": "deedmob-stride-bot",
+  "repository": "https://github.com/DeedMob/stride-deed-bot.git",
+  "description": "A Deedmob stride bot",
+  "scripts": {
+    "start": "node app.js",
+    "deploy": "heroku builds:create -a deedmob-stride-bot"
+  },
   "dependencies": {
     "@atlaskit/css-reset": "^1.1.4",
     "@atlaskit/reduced-ui-pack": "^5.5.0",

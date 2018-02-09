@@ -14,7 +14,7 @@ function prettify_json(data, options = {}) {
   return '{\n' + prettyjson.render(data, options) + '\n}';
 }
 
-const {PORT = 8000, CLIENT_ID, CLIENT_SECRET, ENV = 'production'} = process.env;
+const {PORT, CLIENT_ID, CLIENT_SECRET, ENV = 'production'} = process.env;
 if (!CLIENT_ID || !CLIENT_SECRET) {
   console.log("Usage:");
   console.log("PORT=<http port> CLIENT_ID=<app client ID> CLIENT_SECRET=<app client secret> node app.js");
